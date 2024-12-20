@@ -7,42 +7,17 @@
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-      /* Custom Header and Footer Styling */
-      header {
-        background-color: #343a40;
-        color: white;
-        padding: 1rem 0;
-        text-align: center;
-      }
-      footer {
-        background-color: #343a40;
-        color: white;
-        padding: 1rem 0;
-        text-align: center;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-      }
-      .btn-dark {
-        background-color: #212529;
-        color: white;
-      }
-      .btn-dark:hover {
-        background-color: #1a1e21;
-      }
+      <%= Rails.application.assets.find_asset("application.css").source.html_safe %>
     </style>
   </head>
-
   <body>
     <!-- Header -->
-    <header>
+    <header class="app-header">
       <h1>Book Review App</h1>
     </header>
 
@@ -73,9 +48,10 @@
       <p>&copy; <%= Time.now.year %> Book Review App. Built with Ruby on Rails.</p>
     </footer>
 
-    <!-- Bootstrap JS (Optional if you need interactivity) -->
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </body>
 </html>
