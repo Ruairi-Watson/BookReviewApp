@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Books</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Books List</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <h1>Books</h1>
+    <div class="container">
+      <h2>Books</h2>
       <%= link_to 'Add Book', new_book_path, class: 'btn btn-primary mb-3' %>
 
       <table class="table table-striped">
@@ -16,7 +14,7 @@
             <th>Title</th>
             <th>Author</th>
             <th>Description</th>
-            <th class="text-center">Actions</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -25,7 +23,7 @@
               <td><%= book.title %></td>
               <td><%= book.author %></td>
               <td><%= truncate(book.description, length: 50) %></td>
-              <td class="text-center">
+              <td>
                 <%= link_to 'Show', book_path(book), class: 'btn btn-primary btn-sm' %>
                 <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-secondary btn-sm' %>
                 <%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>

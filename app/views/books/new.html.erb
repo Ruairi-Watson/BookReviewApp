@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Book</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Add New Book</title>
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Add a New Book</h1>
+      <h2>Add a New Book</h2>
       <%= render 'form', book: @book %>
-      <%= link_to 'Back', books_path, class: 'btn btn-secondary' %>
+      <%= link_to 'Back', books_path, class: 'btn btn-secondary mt-3' %>
     </div>
   </body>
 </html>
