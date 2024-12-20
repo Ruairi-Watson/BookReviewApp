@@ -3,31 +3,85 @@
   <head>
     <title>Book Review App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!-- Custom Embedded CSS for Global Styles -->
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #faf3e0; /* Old paper background */
+        color: #4b3832; /* Warm dark brown for text */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff8e7; /* Soft off-white */
+        border: 1px solid #c5a880; /* Aged parchment border */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .app-header {
+        background: linear-gradient(180deg, #5c4033, #402d24); /* Rich wooden gradient */
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        font-family: "Garamond", serif;
+        letter-spacing: 1px;
+        border-radius: 10px 10px 0 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .app-header h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+        border-bottom: 3px solid #a67c52; /* Decorative gold line */
+        padding-bottom: 10px;
+      }
+
+      .app-footer {
+        background: linear-gradient(180deg, #402d24, #5c4033);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 0 0 10px 10px;
+        border-top: 2px solid #a67c52;
+        font-family: "Garamond", serif;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 2px solid transparent;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.2s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-primary {
+        background-color: #d9a760; /* Brass-like button */
+        color: white;
+        border-color: #b58450;
+      }
+
+      .btn-primary:hover {
+        background-color: #b58450;
+      }
+    </style>
   </head>
   <body>
     <header class="app-header">
       <h1>Book Review App</h1>
     </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <%= link_to "Add Book", new_book_path, class: "nav-link" %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <div class="container mt-4">
       <%= yield %>
@@ -36,11 +90,5 @@
     <footer class="app-footer">
       <p>&copy; <%= Time.now.year %> Book Review App. Built with Ruby on Rails.</p>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </body>
 </html>

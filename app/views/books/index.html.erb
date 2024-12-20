@@ -2,13 +2,76 @@
 <html>
   <head>
     <title>Books List</title>
+
+    <!-- Embedded CSS for Index-Specific Styles -->
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table th {
+        background: #8e6c52; /* Rich brown header background */
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+      }
+
+      table td {
+        padding: 10px;
+        border: 1px solid #d7bba8; /* Subtle aged border */
+        text-align: left;
+        vertical-align: top;
+        color: #4b3832;
+      }
+
+      table tr:hover {
+        background: #fff0da; /* Highlight for hover */
+      }
+
+      .btn {
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background-color: #8e6c52;
+      }
+
+      .btn-primary:hover {
+        background-color: #754d38;
+      }
+
+      .btn-secondary {
+        background-color: #c5a880;
+      }
+
+      .btn-secondary:hover {
+        background-color: #a88c6b;
+      }
+
+      .btn-danger {
+        background-color: #bf5f5f;
+      }
+
+      .btn-danger:hover {
+        background-color: #9e4c4c;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h2>Books</h2>
       <%= link_to 'Add Book', new_book_path, class: 'btn btn-primary mb-3' %>
 
-      <table class="table table-striped">
+      <table>
         <thead>
           <tr>
             <th>Title</th>
