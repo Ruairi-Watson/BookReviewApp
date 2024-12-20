@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Books List</title>
-
-    <!-- Embedded CSS for Index-Specific Styles -->
+    <title>Book List</title>
     <style>
+      body {
+        font-family: "Times New Roman", serif;
+        background-color: #f5f0e1;
+        color: #5a4635;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 20px auto;
+        max-width: 1200px;
+        background: #fff8e7;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #8b5e3b;
+      }
+      h2 {
+        text-align: center;
+        color: #4a3623;
+      }
+      .btn {
+        padding: 8px 12px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-right: 5px;
+      }
+      .btn-primary {
+        background-color: #7b3f00;
+        color: #fff;
+      }
+      .btn-secondary {
+        background-color: #b3742f;
+        color: #fff;
+      }
+      .btn-danger {
+        background-color: #b22222;
+        color: #fff;
+      }
       table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
       }
-
-      table th {
-        background: #8e6c52; /* Rich brown header background */
-        color: #fff;
+      th, td {
         padding: 12px;
         text-align: left;
+        border-bottom: 1px solid #ccc;
       }
-
-      table td {
-        padding: 10px;
-        border: 1px solid #d7bba8; /* Subtle aged border */
-        text-align: left;
-        vertical-align: top;
-        color: #4b3832;
-      }
-
-      table tr:hover {
-        background: #fff0da; /* Highlight for hover */
-      }
-
-      .btn {
-        padding: 8px 12px;
-        border-radius: 4px;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: bold;
-        color: #fff;
-        display: inline-block;
-      }
-
-      .btn-primary {
-        background-color: #8e6c52;
-      }
-
-      .btn-primary:hover {
-        background-color: #754d38;
-      }
-
-      .btn-secondary {
-        background-color: #c5a880;
-      }
-
-      .btn-secondary:hover {
-        background-color: #a88c6b;
-      }
-
-      .btn-danger {
-        background-color: #bf5f5f;
-      }
-
-      .btn-danger:hover {
-        background-color: #9e4c4c;
+      th {
+        background-color: #8b5e3b;
+        color: white;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h2>Books</h2>
-      <%= link_to 'Add Book', new_book_path, class: 'btn btn-primary mb-3' %>
-
+      <%= link_to 'Add Book', new_book_path, class: 'btn btn-primary' %>
       <table>
         <thead>
           <tr>
@@ -85,11 +75,11 @@
             <tr>
               <td><%= book.title %></td>
               <td><%= book.author %></td>
-              <td><%= truncate(book.description, length: 50) %></td>
+              <td><%= truncate(book.description, length: 100) %></td>
               <td>
-                <%= link_to 'Show', book_path(book), class: 'btn btn-primary btn-sm' %>
-                <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-secondary btn-sm' %>
-                <%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+                <%= link_to 'Show', book_path(book), class: 'btn btn-primary' %>
+                <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-secondary' %>
+                <%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
               </td>
             </tr>
           <% end %>
