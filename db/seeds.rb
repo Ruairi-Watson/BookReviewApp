@@ -1,0 +1,20 @@
+Book.create([
+  { title: "Neuromancer", author: "William Gibson", description: "A hacker for hire gets a second chance to navigate the dark underworld of cyberspace." },
+  { title: "Snow Crash", author: "Neal Stephenson", description: "A samurai sword–wielding pizza delivery hacker uncovers a virtual reality conspiracy." },
+  { title: "Altered Carbon", author: "Richard K. Morgan", description: "A dystopian world where consciousness can be transferred between bodies." },
+  { title: "Do Androids Dream of Electric Sheep?", author: "Philip K. Dick", description: "A bounty hunter tracks down rogue androids in a post-apocalyptic world." },
+  { title: "Mirrorshades", author: "Bruce Sterling (editor)", description: "A cyberpunk anthology exploring high-tech and low-life themes." },
+  { title: "Burning Chrome", author: "William Gibson", description: "A collection of stories, including the origins of cyberspace and hackers." },
+  { title: "The Peripheral", author: "William Gibson", description: "A small-town gamer stumbles into a dangerous future through a VR device." },
+  { title: "Synners", author: "Pat Cadigan", description: "A world where minds and machines are deeply intertwined, for better or worse." },
+  { title: "When Gravity Fails", author: "George Alec Effinger", description: "A noir detective in a cyberpunk Middle Eastern setting enhanced by neural implants." },
+  { title: "Hardwired", author: "Walter Jon Williams", description: "A future of corporate warlords, smugglers, and cybernetic enhancements." },
+  { title: "Count Zero", author: "William Gibson", description: "Three separate storylines converge in a world of hackers, AIs, and megacorporations." },
+  { title: "Metrophage", author: "Richard Kadrey", description: "A criminal-turned-reluctant-hero in a gritty, disease-ridden cyberpunk city." },
+  { title: "Blade Runner 2049: The Edge of Human", author: "K.W. Jeter", description: "A continuation of the Blade Runner universe, where humans and replicants collide." },
+  { title: "Shockwave Rider", author: "John Brunner", description: "A prescient tale of hackers and information control in a dystopian future." },
+  { title: "The Diamond Age", author: "Neal Stephenson", description: "A young girl discovers an interactive book that shapes her future in a world of nanotechnology." },
+  { title: "Dr. Adder", author: "K.W. Jeter", description: "A dark and twisted cyberpunk tale of surgical modification and corporate exploitation." },
+  { title: "Gun, With Occasional Music", author: "Jonathan Lethem", description: "A cyber-noir detective story set in a surreal dystopian future." },
+  { title: "Mindplayers", author: "Pat Cadigan", description: "A journey into the world of mind modification and altered realities." }
+])
